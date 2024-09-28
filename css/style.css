@@ -64,8 +64,8 @@ main{
 
 .hero-image{
     min-height: 100vh;
-    background-image: url("/assets/img/pexels-pavel-danilyuk-8112201.jpg");
-    background-position: center center;
+    background-image: url("/assets/img/pexels-pavel-danilyuk-8112201.webp");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
