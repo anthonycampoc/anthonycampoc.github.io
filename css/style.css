@@ -132,7 +132,7 @@ max-width: 100%;
         font-size: 30px;
     }
 
-    .flex-service h1{
+    .flex-service h2{
         font-size: 30px;
     }
 
@@ -140,7 +140,7 @@ max-width: 100%;
         font-size: 30px;
     }
 
-    .flex-title h1{
+    .flex-title h2{
         font-size: 30px;
     }
 
@@ -332,8 +332,8 @@ max-width: 100%;
         margin-bottom: 50px;
     }
 
-    .flex-title h1 ,   
-    .flex-service h1{
+    .flex-title h2 ,   
+    .flex-service h2{
         font-size: 30px;
     }
 
