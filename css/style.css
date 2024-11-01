@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.letter {
+    display: inline-block;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.letter img {
+    display: none;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.letter:hover img {
+    display: block;
+    opacity: 1;
+}
+
+.candles {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    animation: showCandles 2s forwards, moveCandles 5s infinite;
+}
+
+.candle {
+    width: 20px;
+    height: 100px;
+    background: linear-gradient(to bottom, #ffeb3b, #ff9800);
+    position: relative;
+    border-radius: 5px;
+}
+
+.candle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 20px;
+    background: radial-gradient(circle, #ffeb3b 0%, #ff9800 60%, transparent 70%);
+    border-radius: 50%;
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { transform: translateX(-50%) scale(1); }
+    100% { transform: translateX(-50%) scale(1.2); }
+}
+
+@keyframes showCandles {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes moveCandles {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+.rose {
+    position: absolute;
+    top: -50px;
+    animation: fall 5s infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
